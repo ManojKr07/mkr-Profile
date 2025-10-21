@@ -1,5 +1,7 @@
 import React from "react";
-import bgImage from "../assets/bg2.webp"; // change to your background image
+import bgImage from "../assets/bg2.webp"; // background
+import resumeImage from "../assets/resume.jpg"; // preview image
+import resumePDF from "../assets/Manoj(Resume01).pdf"; // pdf for download
 
 function Resume() {
   return (
@@ -12,18 +14,18 @@ function Resume() {
         My Resume
       </h1>
 
-      {/* Resume Card */}
+      {/* Resume Image */}
       <div className="w-full max-w-4xl bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-60 rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 backdrop-blur-md border border-gray-300 dark:border-gray-700 transition-all duration-700">
-        <iframe
-          src="../src/assets/Manoj(Resume01).pdf"
-          title="Manoj KR Resume"
-          className="w-full h-[70vh] sm:h-[80vh] rounded-xl"
+        <img
+          src={resumeImage}
+          alt="Manoj KR Resume"
+          className="w-full h-auto rounded-xl"
         />
       </div>
 
       {/* Download Button */}
       <a
-        href="../src/assets/Manoj(Resume01).pdf"
+        href={resumePDF}
         download
         className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 dark:hover:bg-blue-500 shadow-md transition-transform transform hover:scale-105"
       >
